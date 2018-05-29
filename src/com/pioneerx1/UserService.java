@@ -73,7 +73,7 @@ public class UserService {
 	@DELETE
 	@Path("/users/{userId}")
 	@Produces(MediaType.APPLICATION_XML)
-	public String deleteUser(@PathParam("id") int userId) {
+	public String deleteUser(@PathParam("userId") int userId) {
 		int result = userDao.deleteUser(userId);
 		if (result == 1) {
 			return SUCCESS_RESULT;

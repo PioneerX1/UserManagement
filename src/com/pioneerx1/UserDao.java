@@ -81,7 +81,7 @@ public class UserDao {
 		List<User> userList = getAllUsers();
 		for(User user : userList) {
 			if (user.getId() == pUser.getId()) {
-				int index = pUser.getId();
+				int index = userList.indexOf(user);
 				userList.set(index, pUser);
 				saveUserList(userList);
 				return 1;
